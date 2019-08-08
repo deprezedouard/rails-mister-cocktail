@@ -1,0 +1,10 @@
+  <%= simple_form_for [cocktail, dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <% if dose.description.nil? %>
+        <%= f.submit "add a dose to #{cocktail.name}", class: "btn btn-primary"%>
+      <% else %>
+        <%= f.submit "edit a dose of #{cocktail.name}", class: "btn btn-primary"%>
+      <% end %>
+    <!-- [...] -->
+  <% end %>

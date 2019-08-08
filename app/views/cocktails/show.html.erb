@@ -1,0 +1,8 @@
+<h2 class="text-center title-margin"><%= @cocktail.name.upcase %></h2>
+<% @dose_hash.each do |key, value| %>
+  <div class="d-flex justify-content-between">
+    <p><%= value[0] %> of <%= value[1] %></p> <p><%= link_to 'delete', dose_path(key), method: :delete %></p>
+  </div>
+<% end %>
+
+<p class="text-right"><%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail), class: "strong" %></p>

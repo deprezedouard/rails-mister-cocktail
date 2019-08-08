@@ -1,0 +1,9 @@
+  <%= simple_form_for(cocktail) do |f| %>
+      <%= f.input :name %>
+      <% if cocktail.name.nil? %>
+      <%= f.submit "add a cocktail", class: "btn btn-primary"%>
+      <% else %>
+      <%= f.submit "edit this cocktail", class: "btn btn-secundary"%>
+      <% end %>
+    <!-- [...] -->
+  <% end %>

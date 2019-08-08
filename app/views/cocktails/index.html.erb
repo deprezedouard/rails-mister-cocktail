@@ -1,0 +1,8 @@
+
+
+  <% @cocktail_hash.each do |key, value| %>
+    <h2><%= link_to value[0].upcase, cocktail_path(key) %></h2>
+    <p><%= value[1].join(' / ')%></p>
+  <% end %>
+
+  <p class="text-right m-0"><%= link_to 'add a new cocktail', new_cocktail_path, class: 'strong' %></p>
