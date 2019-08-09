@@ -1,9 +1,10 @@
 // Specific CSS for your home-page
 $background: #fcf9ea;
 $foreground: #badfdb;
+
 body {
   background-color: $background;
-  margin: 70px auto 0 auto;
+  margin: 5vw auto;
 }
 
 a {
@@ -21,13 +22,29 @@ h1 {
   letter-spacing: 0.2em;
   margin-bottom: 30px;
 }
+
 h2 {
   font-size: 1em;
   font-weight: 500;
   letter-spacing: 0.2em;
 }
-.title-margin {
+
+.image-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  margin-top: -10px;
   margin-bottom: 30px;
+}
+
+.title {
+  background-color: $foreground;
+  padding: 7px 0;
+  position: absolute;
+  top: 125px;
+  margin-bottom: 30px;
+  font-size: 1.5em !important;
 }
 
 .container {
@@ -40,4 +57,9 @@ h2 {
 
 .strong {
   color: $strong-color;
+}
+
+.image {
+  position: relative;
+  height: 250px;
 }
