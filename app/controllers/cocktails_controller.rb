@@ -9,7 +9,7 @@ class CocktailsController < ApplicationController
       cocktail.ingredients.each do |ingredient|
         ingredients << ingredient.name.downcase
       end
-      @cocktail_hash[cocktail] = [cocktail.name, ingredients]
+      @cocktail_hash[cocktail] = [cocktail.name, ingredients, cocktail.photo]
     end
   end
 

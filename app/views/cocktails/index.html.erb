@@ -1,8 +1,16 @@
-
-
+<div class="cocktail-list">
   <% @cocktail_hash.each do |key, value| %>
-    <h2><%= link_to value[0].upcase, cocktail_path(key) %></h2>
-    <p><%= value[1].join(' / ')%></p>
+    <div class="cocktail-line">
+      <div class="image-container-small">
+        <%= link_to cocktail_path(key) do %>
+          <img class="small" src=<%= value[2] %>>
+        <% end %>
+      </div>
+      <div class="cocktail-info">
+        <h2><%= link_to value[0].upcase, cocktail_path(key) %></h2>
+        <p><%= value[1].join(' / ')%></p>
+      </div>
+    </div>
   <% end %>
-
-  <p class="text-right m-0"><%= link_to 'add a new cocktail', new_cocktail_path, class: 'strong' %></p>
+</div>
+<p class="add-link text-right"><%= link_to 'add a new cocktail', new_cocktail_path, class: 'strong' %></p>

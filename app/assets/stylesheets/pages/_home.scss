@@ -7,6 +7,9 @@ body {
   background-color: $background;
   margin: 5vw auto;
 }
+p {
+  margin: 0
+}
 
 a {
   text-decoration: none;
@@ -35,7 +38,7 @@ h2 {
   background-color: $foreground;
   padding: 40px;
   width: 90vw;
-  max-width: 500px;
+  max-width: 600px;
   box-shadow: 5px 5px 20px rgb(234, 231, 215);
 }
 
@@ -63,11 +66,6 @@ h2 {
   border-bottom: solid 3px $main-color;
 }
 
-.image {
-  top: 170px;
-  height: 250px;
-}
-
 .cocktail-image {
   position: absolute;
   object-fit: cover;
@@ -77,3 +75,29 @@ h2 {
   border: solid 4px $main-color;
 
 }
+.cocktail-list {
+  border-top: solid 1px $main-color;
+}
+.cocktail-line {
+  display: flex;
+  align-items: top;
+  border-bottom: solid 1px $main-color;
+  padding: 10px 0;
+}
+
+.cocktail-info {
+  margin-left: 20px;
+}
+
+.small {
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: solid 3px $main-color;
+}
+
+.add-link {
+  margin-top: 20px;
+}
+
