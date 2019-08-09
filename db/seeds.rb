@@ -19,9 +19,10 @@ end
 
 puts 'Creating cocktails...'
 
-cocktails = ['Moscow Mule', 'Pina Colada', 'Gin Tonic', 'Vodka Cola']
+cocktails = [['Moscow Mule', 'https://res.cloudinary.com/edouard-de-prez/image/upload/v1565350664/moscow-mule_o94w1m.jpg'], ['Pina Colada', 'https://res.cloudinary.com/edouard-de-prez/image/upload/v1565350664/pina-colada_syf4dq.jpg'], ['Gin Tonic', 'https://res.cloudinary.com/edouard-de-prez/image/upload/v1565350664/gin-tonic_mrykp9.jpg'], ['Vodka Cola', 'https://res.cloudinary.com/edouard-de-prez/image/upload/v1565354586/vodka-and-coke-drink-recipe_rzdypf.jpg']]
 cocktails.each do |cocktail|
-  coc = Cocktail.create(name: cocktail)
+  coc = Cocktail.create(name: cocktail[0])
+  coc.remote_photo_url = cocktail[1]
   4.times do
     dose = Dose.new(description: "#{Random.new.rand(1..100)}cl")
     dose.cocktail = coc

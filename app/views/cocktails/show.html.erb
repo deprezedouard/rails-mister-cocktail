@@ -1,5 +1,10 @@
+
 <div class="image-container">
-  <%= image_tag "cocktail.png", alt: "Le Wagon", class: "image"%>
+  <% if @cocktail[:photo] == nil%>
+    <img class="cocktail-image" src="https://res.cloudinary.com/edouard-de-prez/image/upload/v1565350664/moscow-mule_o94w1m.jpg" alt="">
+  <% else %>
+    <img class="cocktail-image" src=<%= @cocktail.photo %> alt="">
+  <% end %>
   <h2 class="text-center title"><%= @cocktail.name.upcase %></h2>
 </div>
 <% @dose_hash.each do |key, value| %>

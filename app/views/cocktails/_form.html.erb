@@ -1,9 +1,11 @@
-  <%= simple_form_for(cocktail) do |f| %>
-      <%= f.input :name %>
-      <% if cocktail.id.nil? %>
-      <%= f.submit "add a cocktail", class: "btn btn-primary"%>
-      <% else %>
-      <%= f.submit "edit this cocktail", class: "btn btn-secundary"%>
-      <% end %>
-    <!-- [...] -->
+<%= simple_form_for(cocktail) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <% if cocktail.id.nil? %>
+  <%= f.submit "add a cocktail", class: "btn btn-primary"%>
+  <% else %>
+  <%= f.submit "edit this cocktail", class: "btn btn-secundary"%>
   <% end %>
+<!-- [...] -->
+<% end %>

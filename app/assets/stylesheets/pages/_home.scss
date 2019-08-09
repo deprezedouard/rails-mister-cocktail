@@ -2,6 +2,7 @@
 $background: #fcf9ea;
 $foreground: #badfdb;
 
+
 body {
   background-color: $background;
   margin: 5vw auto;
@@ -29,23 +30,6 @@ h2 {
   letter-spacing: 0.2em;
 }
 
-.image-container {
-  display: flex;
-  width: 100%;
-  position: relative;
-  justify-content: center;
-  margin-top: -10px;
-  margin-bottom: 30px;
-}
-
-.title {
-  background-color: $foreground;
-  padding: 7px 0;
-  position: absolute;
-  top: 125px;
-  margin-bottom: 30px;
-  font-size: 1.5em !important;
-}
 
 .container {
   background-color: $foreground;
@@ -59,7 +43,37 @@ h2 {
   color: $strong-color;
 }
 
-.image {
+
+.image-container {
+  display: flex;
+  width: 100%;
   position: relative;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+.title {
+  background-color: $foreground;
+  padding: 7px 30px;
+  position: relative;
+  margin-top: 165px;
+  font-size: 1.5em !important;
+  border-top: solid 3px $main-color;
+  border-bottom: solid 3px $main-color;
+}
+
+.image {
+  top: 170px;
   height: 250px;
+}
+
+.cocktail-image {
+  position: absolute;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 4px $main-color;
+
 }
